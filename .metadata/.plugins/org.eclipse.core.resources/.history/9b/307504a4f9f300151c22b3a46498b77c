@@ -1,0 +1,23 @@
+import ISharp.Set;
+import ISharp.SetOperation;
+
+public class SetTest
+{
+        public static void main(String[] args)
+        {
+        try
+        {
+            Set<Integer> sA = new Set<>(1,2,3,4);
+            Set<Integer> sB = new Set<>(3,4,5,6);
+            
+            Set<Integer> sC = new Set<>(sA,sB,SetOperation.Union);
+            Set<Integer> sD = new Set<>(sA,sB,SetOperation.Intersection);
+            
+            System.out.println(sA + " | " + sB + " == " + sC);
+            System.out.println(sA + " & " + sB + " == " + sD);
+        }
+        catch(Exception E)
+        {
+            System.out.println(E);
+        }
+    }

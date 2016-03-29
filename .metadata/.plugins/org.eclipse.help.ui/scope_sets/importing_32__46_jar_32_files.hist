@@ -1,0 +1,4 @@
+#Sun Mar 27 19:24:00 AEDT 2016
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=importing .jar files

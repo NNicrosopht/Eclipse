@@ -1,0 +1,42 @@
+package arraytest;
+
+import ISharp.Array;
+
+public class ArrayTest
+{
+    public static void main(String[] args)
+    {
+        try
+        {
+            Array<String> A = new Array<>();
+
+            A.add(10,"ten");
+            A.add(20,"twenty");
+            A.add(30,"thirty");
+            A.add(40,"fourty");
+            A.add(50,"fifty");
+
+            System.out.println("Original Array:   " + A);
+            
+            A.shift(40, 9, false);
+            
+            System.out.println("Shifted Array:    " + A);
+            
+            A.compress();
+            
+            System.out.println("Compressed Array: " + A);
+            
+            A.sort();
+            
+            System.out.println("Sorted Array:     " + A);
+            
+            System.out.println("Length is " + A.length());
+            System.out.println("Depth is " + A.depth());
+            System.out.println("Is Contiguous " + A.isContiguous());
+        }
+        catch(Exception E)
+        {
+            System.out.println(E);
+        }
+    }
+}
